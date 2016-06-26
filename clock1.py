@@ -68,7 +68,10 @@ new_menu = False
 
 # Startup Messages
 print(get_time() + ": Clock Started Up.")
-send_message_to_email(dad_email, "Clock Started up.")
+try: 
+    send_message_to_email(dad_email, "Clock Started up.")
+except: 
+    pass
 
 while True:
     t_msg = get_time()
